@@ -24,6 +24,8 @@ import time
 #(the windows console is 79 characters wide).
 WIDTH = 79
 
+from chemistry_use import *
+Chemistry()
 #the message we wish to print
 message = "hello!".upper()
 #the printed banner version of the message
@@ -57,7 +59,15 @@ characters = { " " : [ " ",
                        "*   *",
                        "*   *",
                        "*   *" ], 
-
+    data=pickle.load(open("SolutionLevel1Question.dat","rb"))
+    Lavel1=[]
+    for x in range(10):
+        x=random.choice(data)
+        data.pop(data.index(x))
+        Lavel1+=[x]
+    del data
+    whatcome+=[Lavel1]
+    Ans1=[]
                "O" : [ "*****",
                        "*   *",
                        "*   *",
@@ -107,3 +117,12 @@ while True:
         offset = WIDTH
     #take out or change this line to speed up / slow down the display
     time.sleep(0.05)
+        data=pickle.load(open("SolutionLevel1Question.dat","rb"))
+    Lavel1=[]
+    for x in range(10):
+        x=random.choice(data)
+        data.pop(data.index(x))
+        Lavel1+=[x]
+    del data
+    whatcome+=[Lavel1]
+    Ans1=[]
